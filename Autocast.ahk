@@ -95,7 +95,7 @@ Main() {
     PlayerStats:={}
     ReadPlayerStats(WinID%A_Index%, PlayerStats)
 
-    If PlayerStats.InCity || PlayerStats.MapName = "Enlightened Hideout" {
+    If PlayerStats.InCity = "" || PlayerStats.InCity != 65537 || PlayerStats.MapName = "Enlightened Hideout" {
       continue
     }
 
