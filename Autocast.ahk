@@ -95,7 +95,7 @@ Main() {
     PlayerStats:={}
     ReadPlayerStats(WinID%A_Index%, PlayerStats)
 
-    If PlayerStats.MapName = "Enlightened Hideout" {
+    If PlayerStats.InCity || PlayerStats.MapName = "Enlightened Hideout" {
       continue
     }
 
@@ -105,7 +105,7 @@ Main() {
     CastDurationCache[3] -= 100
     CastDurationCache[4] -= 100
 
-    Random, randomOffset, 200, 1200
+    Random, randomOffset, -2200, 2200
 
     IfWinActive Path of Exile ahk_class POEWindowClass
     {
